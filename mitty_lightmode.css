@@ -9,8 +9,8 @@
 
 :root {
     /* to change backgrounds, text color etc, change the hex values here! */
-    --chat-message-text-color: #60e4ff;
-    --chat-message-background-color: #000000;
+    --chat-message-text-color: #000000;
+    --chat-message-background-color: #ffffff;
     --chat-author-viewer-name-color: #ffffff;
     --chat-author-viewer-background-color: #111c3b;
     --chat-author-member-name-color: #ffffff;
@@ -31,9 +31,18 @@
         -2px 0 0 black,
         0 2px 0 black,
         0 -2px 0 black;
+  --outline-white: 0px 0px 0 white,
+        1px 1px 0 white,
+        -1px -1px 0 white,
+        -1px 1px 0 white,
+        1px -1px 0 white,
+        1px 0 0 white,
+        -1px 0 0 white,
+        0 1px 0 white,
+        0 -1px 0 white;
     --crt-effect-dark: linear-gradient(rgba(200, 200, 255, 0.2) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-    --crt-effect-light: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-    --crt-size: 100% 8px, 12px 100%;
+    --crt-effect-light: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    --crt-size: 100% 6px, 10px 100%;
 }
 
 /* Hide everything unnecessary */
@@ -145,12 +154,12 @@ yt-live-chat-text-message-renderer span#message {
     display: block;
     position: relative !important;
     background-color: var(--chat-message-background-color) !important;
-    background-image: var(--crt-effect-dark) !important;
+    background-image: var(--crt-effect-light) !important;
     color: var(--chat-message-text-color) !important;
     line-height: 1.8rem !important;
     font-family: 'jetbrains_monobold';
     font-size: 1.5rem !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     padding: 18px 5px 8px 15px !important;
     /*border-radius: 15px !important;*/
     border-color: #111c3b55;
@@ -158,12 +167,11 @@ yt-live-chat-text-message-renderer span#message {
     min-height: 28px;
     text-align: center left !important;
     position: relative !important;
-    background-color: black !important;
     background-repeat: repeat !important;
     background-size: var(--crt-size) !important;
     background-position-x: 0px !important;
     z-index: -2 !important;
-    text-shadow: 0.3px 0 1px rgba(0, 30, 255, 0.5);
+    text-shadow: var(--outline-white) !important;
     overflow: visible !important;
 }
 
@@ -174,7 +182,7 @@ yt-live-chat-text-message-renderer #content > #before-content-buttons{
 }
 yt-live-chat-text-message-renderer #content > #before-content-buttons yt-button-view-model button-view-model button{
   border-radius: 0px !important;
-  background-image: var(--crt-effect-dark) !important;
+  background-image: var(--crt-effect-light) !important;
   line-height: 1.5rem !important;
   font-family: 'jetbrains_monobold';
   font-size: 1.5rem !important;
@@ -257,7 +265,7 @@ yt-live-chat-like-button-view-model {
 yt-live-chat-paid-message-renderer #content {
     background-color: var(--chat-message-background-color) !important;
     color: var(--chat-message-text-color) !important;
-    background-image: var(--crt-effect-dark) !important;
+    background-image: var(--crt-effect-light) !important;
     background-repeat: repeat !important;
     background-size: var(--crt-size) !important;
     background-position-x: 0px !important;
@@ -270,13 +278,13 @@ yt-live-chat-paid-message-renderer #content {
 
 yt-live-chat-paid-message-renderer #message {
     padding-top: 10px !important;
-    font-size: 1.5rem !important;
+    font-size: 1.6rem !important;
     
     line-height: 1.5rem !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     padding: 12px !important;
     font-family: 'jetbrains_monobold' !important;
-    padding-right: 75px !important;
+    padding-right: 70px !important;
 }
 
 yt-live-chat-paid-message-renderer #header {
@@ -288,7 +296,7 @@ yt-live-chat-paid-message-renderer #header::before {
     display: block;
     position: absolute !important;
     top: 8px;
-    right: 8px;
+    right: 12px;
     background-image: var(--supa-decoration-image);
     background-repeat: no-repeat;
     z-index: 9;
@@ -378,50 +386,15 @@ yt-live-chat-membership-item-renderer > #card #header-content-primary-column{
     display: grid !important;
     grid-template-rows: auto auto;
     padding: 8px !important;
-    gap: 6px !important;
+    gap: 4px !important;
     font-weight: 500 !important;
  
-}
-
-yt-live-chat-membership-item-renderer > #card #author-name{
-    font-size: 1.8rem !important;
-}
-
-yt-live-chat-membership-item-renderer #header #header-content {
-    min-height: 80px !important;
-    display: flex !important;
-    align-items: center!important;
-  } 
-  
-yt-live-chat-membership-item-renderer #header #header-content::before,
-yt-live-chat-membership-item-renderer #header #header-content::after{
-      position: absolute !important;
-      content: " ";
-      background-image: var(--member-decoration);
-      height: 75px;
-      width: 70px;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      right: 10px !important;
-      top: 10px !important;
-      z-index: 2;
-  }
-yt-live-chat-membership-item-renderer #header #header-content::before{
-  filter: drop-shadow(1px 1px 0 white)
-            drop-shadow(-1px -1px 0 white)
-            drop-shadow(-1px 1px 0 white)
-            drop-shadow(1px -1px 0 white);
-}
-yt-live-chat-membership-item-renderer #header #header-content::after{
-  background-image: var(--chat-background-image);
-  right: 70px !important;
-  top: 10px !important;
 }
 
 yt-live-chat-membership-item-renderer>#card>#content {
     background-color: var(--chat-message-background-color) !important;
     color: var(--chat-message-text-color) !important;
-    background-image: var(--crt-effect-dark) !important;
+    background-image: var(--crt-effect-light) !important;
     background-repeat: repeat !important;
     background-size: var(--crt-size) !important;
 }
@@ -429,7 +402,7 @@ yt-live-chat-membership-item-renderer>#card>#content {
 yt-live-chat-membership-item-renderer>#card>#header {
     background-color: var(--chat-author-member-background-color) !important;
     color: var(--chat-message-text-color) !important;
-    background-image: var(--crt-effect-dark) !important;
+    background-image: var(--crt-effect-light) !important;
     background-repeat: repeat !important;
     background-size: var(--crt-size) !important;
 }
@@ -440,16 +413,19 @@ ytd-sponsorships-live-chat-gift-purchase-announcement-renderer>#header>div {
     border-radius: 0px !important;
     background-color: var(--chat-author-member-background-color) !important;
     color: var(--chat-message-text-color) !important;
-    background-image: var(--crt-effect-dark) !important;
+    background-image: var(--crt-effect-light) !important;
     background-repeat: repeat !important;
     background-size: var(--crt-size) !important;
 }
 
 ytd-sponsorships-live-chat-gift-purchase-announcement-renderer #header-content-primary-column{
+
     display: grid !important;
     grid-template-rows: auto auto;
     padding: 8px !important;
-    gap: 6px !important;
+    gap: 4px !important;
+    
+ 
 }
 
 ytd-sponsorships-live-chat-gift-purchase-announcement-renderer #header-content-inner-column > yt-live-chat-author-chip #author-name,
