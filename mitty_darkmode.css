@@ -245,9 +245,11 @@ yt-live-chat-paid-sticker-renderer>#card {
     background-position-x: 0px !important;
 }
 
-yt-live-chat-paid-message-renderer {
+yt-live-chat-paid-message-renderer, 
+yt-live-chat-membership-item-renderer, 
+yt-live-chat-paid-sticker-renderer {
     margin-top: 25px !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 20px !important;
 }
 
 yt-live-chat-like-button-view-model {
