@@ -373,14 +373,15 @@ ytd-sponsorships-live-chat-header-renderer #header {
     --dot-color: var(--chat-message-background-dot-color) !important;
     background-color: var(--background-color) !important;
     background-image: var(--chat-message-background-image) !important;
-    background-size: 100px 100px !important;
+    background-size: 125px !important;
+    background-repeat: repeat !important;
     /* Gradient */ /*linear-gradient( 180deg, var(--background-color) 20%, transparent 100% ),*/
     /* First row of dots */
     /*radial-gradient( var(--dot-color) var(--chat-message-background-dot-size), transparent 0 ),*/
     /* Second row of dots */
     /*radial-gradient( var(--dot-color) var(--chat-message-background-dot-size), transparent 0 ) !important;*/
     background-position: top, var(--dot-background-position) !important;
-    background-size: contain, var(--chat-dot-spacing) var(--chat-dot-spacing), var(--chat-dot-spacing) var(--chat-dot-spacing) !important;
+    /* background-size: contain, var(--chat-dot-spacing) var(--chat-dot-spacing), var(--chat-dot-spacing) var(--chat-dot-spacing) !important;
 }
 
 /* Paid message color configuration */
