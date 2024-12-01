@@ -501,3 +501,8 @@ ytd-sponsorships-live-chat-gift-purchase-announcement-renderer #header-content-i
 a {
     color: cornflowerblue !important;
 }
+
+#message .mention {
+    background-color: transparent !important;
+    color: var(--chat-message-text-color) !important;
+}
